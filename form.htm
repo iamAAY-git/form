@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Login & SignUp form </title>
+</head>
+<body>
+    <div class="container">
+        <input type="radio" id="login" name="toggle" checked>
+        <input type="radio" id="signup" name="toggle">
+
+        <div class="form-container">
+            <!-- Login Form -->
+            <form class="form" onsubmit="return loginUser(event)">
+                <h2>Login</h2>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required minlength="6">
+                <button type="submit">Login</button>
+                <p id="loginError" class="error"></p>
+                <label for="signup" class="toggle-label">Don't have an account? Sign Up</label>
+            </form>
+
+            <!-- Signup Form -->
+            <form class="form" onsubmit="return signUpUser(event)">
+                <h2>Sign Up</h2>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required minlength="6">
+                <button type="submit">Sign Up</button>
+                <p id="signupError" class="error"></p>
+                <label for="login" class="toggle-label">Already have an account? Login</label>
+            </form>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
